@@ -57,6 +57,35 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+<<<<<<< HEAD
+=======
+#define B1_Pin GPIO_PIN_13
+#define B1_GPIO_Port GPIOC
+#define Test_pin_Pin GPIO_PIN_3
+#define Test_pin_GPIO_Port GPIOC
+#define S1_Pin GPIO_PIN_1
+#define S1_GPIO_Port GPIOA
+#define USART_TX_Pin GPIO_PIN_2
+#define USART_TX_GPIO_Port GPIOA
+#define USART_RX_Pin GPIO_PIN_3
+#define USART_RX_GPIO_Port GPIOA
+#define S2_Pin GPIO_PIN_4
+#define S2_GPIO_Port GPIOA
+#define LD2_Pin GPIO_PIN_5
+#define LD2_GPIO_Port GPIOA
+#define D2_Pin GPIO_PIN_6
+#define D2_GPIO_Port GPIOA
+#define D3_Pin GPIO_PIN_7
+#define D3_GPIO_Port GPIOA
+#define TMS_Pin GPIO_PIN_13
+#define TMS_GPIO_Port GPIOA
+#define TCK_Pin GPIO_PIN_14
+#define TCK_GPIO_Port GPIOA
+#define SWO_Pin GPIO_PIN_3
+#define SWO_GPIO_Port GPIOB
+#define D4_Pin GPIO_PIN_6
+#define D4_GPIO_Port GPIOB
+>>>>>>> b395f61 (initial commit)
 
 /* USER CODE BEGIN Private defines */
 

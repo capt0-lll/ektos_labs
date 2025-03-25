@@ -23,4 +23,8 @@
 *.swp
 
 .DS_Store
+<<<<<<< HEAD
 Thumbs.db
+=======
+Thumbs.db
+>>>>>>> b395f61 (initial commit)
