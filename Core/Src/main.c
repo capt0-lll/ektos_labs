@@ -99,13 +99,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-<<<<<<< HEAD
-  while (1)
-  {
-	  HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin, GPIO_PIN_RESET);
-	  HAL_Delay(500);
 
-=======
 
   while (1)
   {
@@ -113,7 +107,6 @@ int main(void)
 	  HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin, GPIO_PIN_RESET);
 	  HAL_Delay(500);
 
->>>>>>> f2aaaa9 (refactored code)
 	  HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin, GPIO_PIN_SET);
 	  HAL_GPIO_WritePin(D3_GPIO_Port, D3_Pin, GPIO_PIN_RESET);
 	  HAL_Delay(500);
@@ -123,10 +116,7 @@ int main(void)
 	  HAL_Delay(500);
 
 	  HAL_GPIO_WritePin(D4_GPIO_Port, D4_Pin, GPIO_PIN_SET);
-<<<<<<< HEAD
-=======
 
->>>>>>> f2aaaa9 (refactored code)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
