@@ -57,8 +57,6 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-<<<<<<< HEAD
-=======
 #define B1_Pin GPIO_PIN_13
 #define B1_GPIO_Port GPIOC
 #define Test_pin_Pin GPIO_PIN_3
@@ -85,7 +83,6 @@ void Error_Handler(void);
 #define SWO_GPIO_Port GPIOB
 #define D4_Pin GPIO_PIN_6
 #define D4_GPIO_Port GPIOB
->>>>>>> b395f61 (initial commit)
 
 /* USER CODE BEGIN Private defines */
 
