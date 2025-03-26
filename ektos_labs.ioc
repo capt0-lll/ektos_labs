@@ -21,19 +21,16 @@ Mcu.Pin11=PA6
 Mcu.Pin12=PA7
 Mcu.Pin13=PA13
 Mcu.Pin14=PA14
-<<<<<<< HEAD
 Mcu.Pin15=PB3
 Mcu.Pin16=PB6
 Mcu.Pin17=PB7
 Mcu.Pin18=PB8
 Mcu.Pin19=VP_SYS_VS_Systick
-=======
 Mcu.Pin15=PC11
 Mcu.Pin16=PB3
 Mcu.Pin17=PB6
 Mcu.Pin18=PB7
 Mcu.Pin19=PB8
->>>>>>> f2aaaa9 (refactored code)
 Mcu.Pin2=PC15-OSC32_OUT
 Mcu.Pin20=VP_SYS_VS_Systick
 Mcu.Pin3=PH0-OSC_IN
@@ -43,11 +40,8 @@ Mcu.Pin6=PA1
 Mcu.Pin7=PA2
 Mcu.Pin8=PA3
 Mcu.Pin9=PA4
-<<<<<<< HEAD
 Mcu.PinsNb=20
-=======
 Mcu.PinsNb=21
->>>>>>> f2aaaa9 (refactored code)
 Mcu.ThirdPartyNb=0
 Mcu.UserConstants=
 Mcu.UserName=STM32F446RETx
@@ -97,17 +91,13 @@ PA5.GPIO_Label=LD2 [Green Led]
 PA5.Locked=true
 PA5.PinState=GPIO_PIN_RESET
 PA5.Signal=GPIO_Output
-PA6.GPIOParameters=PinState,GPIO_PuPd,GPIO_Label,GPIO_ModeDefaultOutputPP
+PA6.GPIOParameters=PinState,GPIO_Label
 PA6.GPIO_Label=D2
-PA6.GPIO_ModeDefaultOutputPP=GPIO_MODE_OUTPUT_OD
-PA6.GPIO_PuPd=GPIO_NOPULL
 PA6.Locked=true
 PA6.PinState=GPIO_PIN_SET
 PA6.Signal=GPIO_Output
-PA7.GPIOParameters=PinState,GPIO_PuPd,GPIO_Label,GPIO_ModeDefaultOutputPP
+PA7.GPIOParameters=PinState,GPIO_Label
 PA7.GPIO_Label=D3
-PA7.GPIO_ModeDefaultOutputPP=GPIO_MODE_OUTPUT_OD
-PA7.GPIO_PuPd=GPIO_NOPULL
 PA7.Locked=true
 PA7.PinState=GPIO_PIN_SET
 PA7.Signal=GPIO_Output
@@ -115,10 +105,8 @@ PB3.GPIOParameters=GPIO_Label
 PB3.GPIO_Label=SWO
 PB3.Locked=true
 PB3.Signal=SYS_JTDO-SWO
-PB6.GPIOParameters=PinState,GPIO_PuPd,GPIO_Label,GPIO_ModeDefaultOutputPP
+PB6.GPIOParameters=PinState,GPIO_Label
 PB6.GPIO_Label=D4
-PB6.GPIO_ModeDefaultOutputPP=GPIO_MODE_OUTPUT_OD
-PB6.GPIO_PuPd=GPIO_NOPULL
 PB6.Locked=true
 PB6.PinState=GPIO_PIN_SET
 PB6.Signal=GPIO_Output
@@ -126,11 +114,6 @@ PB7.Mode=I2C
 PB7.Signal=I2C1_SDA
 PB8.Mode=I2C
 PB8.Signal=I2C1_SCL
-<<<<<<< HEAD
-=======
-PC11.Locked=true
-PC11.Signal=GPXTI11
->>>>>>> f2aaaa9 (refactored code)
 PC13.GPIOParameters=GPIO_Label,GPIO_ModeDefaultEXTI
 PC13.GPIO_Label=B1 [Blue PushButton]
 PC13.GPIO_ModeDefaultEXTI=GPIO_MODE_IT_FALLING
@@ -184,7 +167,7 @@ ProjectManager.ToolChainLocation=
 ProjectManager.UAScriptAfterPath=
 ProjectManager.UAScriptBeforePath=
 ProjectManager.UnderRoot=true
-ProjectManager.functionlistsort=1-SystemClock_Config-RCC-false-HAL-false,2-MX_GPIO_Init-GPIO-false-HAL-true,3-MX_USART2_UART_Init-USART2-false-HAL-true,4-MX_I2C1_Init-I2C1-false-HAL-true
+ProjectManager.functionlistsort=1-SystemClock_Config-RCC-false-HAL-false,2-MX_GPIO_Init-GPIO-false-HAL-true,3-MX_USART2_UART_Init-USART2-false-HAL-true
 RCC.48MHZClocksFreq_Value=84000000
 RCC.AHBFreq_Value=84000000
 RCC.APB1CLKDivider=RCC_HCLK_DIV2
