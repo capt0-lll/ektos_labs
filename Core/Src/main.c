@@ -109,7 +109,7 @@ int main(void)
 
   while (1)
   {
-
+	  //
 	  HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin, GPIO_PIN_RESET);
 	  HAL_Delay(500);
 
