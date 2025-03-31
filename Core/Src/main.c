@@ -94,13 +94,7 @@ int main(void)
   MX_USART2_UART_Init();
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-  const PinConfig leds [] = {
-	{.port = D2_GPIO_Port, .pin = D2_Pin},
-	{.port = D3_GPIO_Port, .pin = D3_Pin},
-	{.port = D4_GPIO_Port, .pin = D4_Pin},
-  };
 
-  const uint8_t number_of_leds = sizeof(leds)/sizeof(leds[0]);
 
   /* USER CODE END 2 */
 
@@ -109,9 +103,7 @@ int main(void)
 
   while (1)
   {
-
-    //
-	  make_single_led_run(leds, number_of_leds);
+	  make_single_led_run();
 
     /* USER CODE END WHILE */
 
