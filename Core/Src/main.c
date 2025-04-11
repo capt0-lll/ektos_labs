@@ -284,15 +284,19 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(Test_pin_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : S1_Pin S2_Pin */
-  GPIO_InitStruct.Pin = S1_Pin|S2_Pin;
+  /*Configure GPIO pin : S1_Pin */
+  GPIO_InitStruct.Pin = S1_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(S1_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : S2_Pin */
   GPIO_InitStruct.Pin = S2_Pin;
+<<<<<<< HEAD
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+=======
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
+>>>>>>> 54517a7 (added deleted driver files and fixed .gitignore file)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(S2_GPIO_Port, &GPIO_InitStruct);
 
@@ -309,12 +313,6 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : PC11 */
-  GPIO_InitStruct.Pin = GPIO_PIN_11;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pin : D4_Pin */
   GPIO_InitStruct.Pin = D4_Pin;
