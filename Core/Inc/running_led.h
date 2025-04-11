@@ -7,4 +7,4 @@ typedef struct {
   	uint16_t pin;
   } PinConfig;
 
-void make_single_led_run();
+void make_single_led_run(void);
