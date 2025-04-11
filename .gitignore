@@ -8,7 +8,6 @@
 *.elf
 *.map
 *.list
-*.o
 *.d
 *.su
 *.hex
@@ -23,8 +22,3 @@
 *.swp
 
 .DS_Store
-<<<<<<< HEAD
-Thumbs.db
-=======
-Thumbs.db
->>>>>>> b395f61 (initial commit)
