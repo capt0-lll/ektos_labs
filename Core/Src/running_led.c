@@ -23,6 +23,7 @@ void make_single_led_run(void)
 
 		HAL_GPIO_WritePin(current_led.port, current_led.pin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(previous_led.port, previous_led.pin, GPIO_PIN_SET);
+
 		HAL_Delay(500);
 	}
 
