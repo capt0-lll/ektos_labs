@@ -1,10 +1,9 @@
 #include "display_binary_led.h"
 #include "pin_config.h"
-#include <stdbool.h>
 
 static GPIO_PinState determine_single_led_state(const uint8_t number, const uint8_t digit);
 
-void display_binary(uint8_t number)
+void display_binary(const uint8_t number)
 {
 	static const PinConfig leds [] = {
 			{.port = D2_GPIO_Port, .pin = D2_Pin},
