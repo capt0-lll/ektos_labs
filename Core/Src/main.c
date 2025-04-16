@@ -101,7 +101,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    make_single_led_run();
+    switch_led_on_button_press();
 
     /* USER CODE END WHILE */
 
