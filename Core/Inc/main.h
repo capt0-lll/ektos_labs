@@ -32,6 +32,8 @@ extern "C" {
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "running_led.h"
+#include "display_binary_led.h"
+
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -69,6 +71,7 @@ void Error_Handler(void);
 #define USART_RX_GPIO_Port GPIOA
 #define S2_Pin GPIO_PIN_4
 #define S2_GPIO_Port GPIOA
+#define S2_EXTI_IRQn EXTI4_IRQn
 #define LD2_Pin GPIO_PIN_5
 #define LD2_GPIO_Port GPIOA
 #define D2_Pin GPIO_PIN_6

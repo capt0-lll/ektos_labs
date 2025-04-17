@@ -1,4 +1,5 @@
-#include <running_led.h>
+#include "running_led.h"
+#include "pin_config.h"
 
 void make_single_led_run()
 {
@@ -12,18 +13,11 @@ void make_single_led_run()
 
 	for(uint8_t i = 0; i < number_of_leds; i++)
 	{
-		PinConfig current_led = leds[i];
-		PinConfig previous_led;
-		if(i == 0)
-		{
-			previous_led = leds[number_of_leds - 1];
-		}
-		else
-		{
-			previous_led = leds[i - 1];
-		}
-		HAL_GPIO_WritePin(current_led.port, current_led.pin, GPIO_PIN_RESET);
-		HAL_GPIO_WritePin(previous_led.port, previous_led.pin, GPIO_PIN_SET);
+		const PinConfig *current_led = &leds[i];
+		const PinConfig *previous_led = (i == 0) ? &leds[number_of_leds - 1] : & leds[i - 1];
+
+		HAL_GPIO_WritePin(current_led->port, current_led->pin, GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(previous_led->port, previous_led->pin, GPIO_PIN_SET);
 		HAL_Delay(500);
 	}
 
