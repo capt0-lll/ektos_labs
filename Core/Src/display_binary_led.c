@@ -24,7 +24,6 @@ static GPIO_PinState determine_single_led_state(const uint8_t number, const uint
 {
 	const uint8_t number_with_offset = number >> digit;
 	const uint8_t mask = 1;
-	GPIO_PinState result = ((number_with_offset & mask) == 1) ? GPIO_PIN_RESET : GPIO_PIN_SET;
-	return result;
+	return ((number_with_offset & mask) != 0) ? GPIO_PIN_RESET : GPIO_PIN_SET;
 
 }

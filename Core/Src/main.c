@@ -59,11 +59,22 @@ static void MX_I2C1_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+// I was having issues with implementing debouncing when interrupt was triggered with falling edge
+// Bounce was when I pressed button more then 200 ms
+// So I've changed trigger to rising edge
+
 void HAL_GPIO_EXTI_Callback(uint16_t Pin)
 {
+	static uint32_t last_press_time = 0;
 	if(Pin == S2_Pin)
 	{
-		count++;
+		const uint32_t current_time = HAL_GetTick();
+		if(current_time - last_press_time > 200)
+		{
+			last_press_time = current_time;
+			count++;
+		}
 	}
 }
 /* USER CODE END 0 */
@@ -281,7 +292,7 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pin : S2_Pin */
   GPIO_InitStruct.Pin = S2_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(S2_GPIO_Port, &GPIO_InitStruct);
 
