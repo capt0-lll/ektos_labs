@@ -1,9 +1,12 @@
 #include "switch_led.h"
 #include "pin_config.h"
+#include <stdbool.h>
 
-static char read_button(void);
+static void switch_led(void);
+static bool check_button_pressed(void);
 
-void switch_led(void)
+
+static void switch_led(void)
 {
 	static uint8_t led_number = 0;
 
@@ -22,17 +25,18 @@ void switch_led(void)
 	HAL_GPIO_WritePin(previous_led->port, previous_led->pin, GPIO_PIN_SET);
 
 	led_number = (led_number + 1) % number_of_leds;
+	HAL_Delay(100);
 }
 
 void switch_led_on_button_press(void)
 {
 
-	if(read_button())
+	 if(check_button_pressed())
 	{
-		HAL_Delay(30);
-		if(read_button()){
+		HAL_Delay(20);
+		if(check_button_pressed()){
 			switch_led();
-			while(read_button())
+			while(check_button_pressed())
 			{
 				HAL_Delay(20);
 			}
@@ -40,10 +44,9 @@ void switch_led_on_button_press(void)
 	}
 }
 
-static char read_button(void)
+static bool check_button_pressed(void)
 {
-	PinConfig button = {.port = S1_GPIO_Port, .pin = S1_Pin};
-	char result = HAL_GPIO_ReadPin(button.port, button.pin) == GPIO_PIN_SET;
-	return result;
+	const PinConfig button = {.port = S1_GPIO_Port, .pin = S1_Pin};
+	return HAL_GPIO_ReadPin(button.port, button.pin) == GPIO_PIN_RESET;
 }
 

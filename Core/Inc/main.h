@@ -31,7 +31,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "running_led.h"
+
 #include "switch_led.h"
 /* USER CODE END Includes */
 
