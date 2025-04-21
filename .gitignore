@@ -8,7 +8,6 @@
 *.elf
 *.map
 *.list
-*.o
 *.d
 *.su
 *.hex
