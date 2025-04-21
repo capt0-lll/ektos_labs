@@ -21,5 +21,9 @@
 *.gch
 *.swp
 
+<<<<<<< HEAD
 .DS_Store
 Thumbs.db
+=======
+.DS_Store
+>>>>>>> 1af09a3 (added deleted driver files and fixed .gitignore file)
