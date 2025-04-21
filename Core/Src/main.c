@@ -45,7 +45,6 @@ I2C_HandleTypeDef hi2c1;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -95,14 +94,19 @@ int main(void)
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
 
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+<<<<<<< HEAD
     make_single_led_run();
 
+=======
+	  make_single_led_run();
+>>>>>>> 0143bfe (added actual pause implementation)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

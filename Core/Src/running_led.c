@@ -1,6 +1,15 @@
 #include <running_led.h>
 
+<<<<<<< HEAD
 void make_single_led_run()
+=======
+#include <stdbool.h>
+
+static void make_pause_on_button_press(void);
+static bool button_pressed(void);
+
+void make_single_led_run(void)
+>>>>>>> 0143bfe (added actual pause implementation)
 {
 	static const PinConfig leds [] = {
 		{.port = D2_GPIO_Port, .pin = D2_Pin},
@@ -12,6 +21,7 @@ void make_single_led_run()
 
 	for(uint8_t i = 0; i < number_of_leds; i++)
 	{
+<<<<<<< HEAD
 		PinConfig current_led = leds[i];
 		PinConfig previous_led;
 		if(i == 0)
@@ -22,9 +32,34 @@ void make_single_led_run()
 		{
 			previous_led = leds[i - 1];
 		}
+=======
+		make_pause_on_button_press();
+		PinConfig current_led = leds[i];
+		PinConfig previous_led = (i == 0) ? leds[number_of_leds - 1] : leds[i - 1];
+
+>>>>>>> 0143bfe (added actual pause implementation)
 		HAL_GPIO_WritePin(current_led.port, current_led.pin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(previous_led.port, previous_led.pin, GPIO_PIN_SET);
 		HAL_Delay(500);
 	}
 
 }
+<<<<<<< HEAD
+=======
+
+static void make_pause_on_button_press(void)
+{
+	static const uint8_t debounce_delay = 20;
+	const uint32_t start_time = HAL_GetTick();
+	while(button_pressed() || HAL_GetTick() - start_time < debounce_delay)
+	{
+
+	}
+}
+
+static bool button_pressed(void)
+{
+	static const PinConfig button = {.port = S1_GPIO_Port, .pin = S1_Pin};
+	return !HAL_GPIO_ReadPin(button.port, button.pin);
+}
+>>>>>>> 0143bfe (added actual pause implementation)
