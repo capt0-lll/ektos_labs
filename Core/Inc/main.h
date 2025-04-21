@@ -31,9 +31,14 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+<<<<<<< HEAD
+
+#include "switch_led.h"
+=======
 #include "running_led.h"
 #include "display_binary_led.h"
 
+>>>>>>> develop
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
